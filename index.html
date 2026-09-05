@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux-Lab :: Metasploit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-brand">
+    <span class="brand-mark">&gt;_</span>
+    <span class="brand-text">Linux-Lab <em>:: Metasploit</em></span>
+  </div>
+
+  <div class="topbar-controls">
+    <div class="ctrl-group" role="group" aria-label="Taille du texte">
+      <button id="fontDown" class="ctrl-btn" title="Réduire le texte">A-</button>
+      <button id="fontUp" class="ctrl-btn" title="Agrandir le texte">A+</button>
+    </div>
+    <button id="themeToggle" class="ctrl-btn" title="Changer de thème">☾</button>
+    <button id="langToggle" class="ctrl-btn lang-btn" title="Switch language">EN</button>
+  </div>
+</div>
+
+<main id="app" class="app"></main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-block">
+      <strong data-i18n="footer.about.title">Linux-Lab :: Metasploit</strong>
+      <p data-i18n="footer.about.text">Plateforme pédagogique interactive pour apprendre Kali Linux et Metasploit, étape par étape, dans une console simulée.</p>
+    </div>
+    <div class="footer-block">
+      <strong data-i18n="footer.links.title">Liens</strong>
+      <ul class="footer-list">
+        <li><a href="#" data-modal="legal" data-i18n="footer.legal">Mentions légales</a></li>
+        <li><a href="#" data-modal="cgu" data-i18n="footer.cgu">CGU</a></li>
+        <li><a href="#" data-modal="license" data-i18n="footer.license">Licence</a></li>
+        <li><a href="https://www.linkedin.com/in/innocent-twagirumukiza" target="_blank" rel="noopener noreferrer">LinkedIn — Innocent Twagirumukiza ↗</a></li>
+      </ul>
+    </div>
+    <div class="footer-block">
+      <strong data-i18n="footer.progress.title">Votre progression</strong>
+      <p id="footerProgress">0 / 0</p>
+      <button id="resetProgress" class="link-btn" data-i18n="footer.reset">Réinitialiser ma progression</button>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-i18n="footer.rights">© 2026 Innocent Twagirumukiza — Conseil en systèmes et logiciels informatiques (SIREN 454 007 691).</span>
+  </div>
+</footer>
+
+<div id="modalRoot" class="modal-root" hidden>
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-box" role="dialog" aria-modal="true">
+    <button class="modal-close" data-close-modal aria-label="Fermer">✕</button>
+    <div id="modalContent" class="modal-content"></div>
+  </div>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="i18n.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
